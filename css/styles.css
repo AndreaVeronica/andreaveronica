@@ -1,0 +1,371 @@
+/*
+font-family: 'Raleway', sans-serif;
+
+font-family: 'Shadows Into Light Two', cursive; */
+
+body {
+    background-image: url("../images/lightteal.jpg");
+    background-attachment: fixed;
+    z-index: -3;
+    font-family: 'Raleway', sans-serif;
+    color: #022c31;
+}
+
+a:hover {
+    color: black;
+}
+
+.font-style {
+    font-family: 'Shadows Into Light Two', cursive;
+}
+
+
+/*
+.allSections {
+    height: 600px;
+}*/
+
+
+/*----  Header -----*/
+
+header {
+    background: rgba(255, 255, 255, 0.5);
+    height: 40px;
+    position: fixed;
+    top: 0;
+    transition: top 0.2s ease-in-out;
+    width: 100%;
+    z-index: 2;
+}
+
+.nav-up {
+    top: -40px;
+}
+
+ul .nav-bar {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+}
+
+.nav-bar li {
+    display: inline-block;
+    width: 24%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    margin-top: 5px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-size: 24px;
+}
+
+li a:hover {
+    color: gray;
+}
+
+
+/*----  Section 1   -----*/
+
+.sectionOne {
+    color: white;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    align-items: center;
+    height: 700px;
+}
+
+.bio-image {
+    height: 300px;
+    border-radius: 5px;
+    border: 10px solid rgba(255, 255, 255, 0.5);
+}
+
+.left-bio {
+    width: 49vw;
+    text-align: center;
+    vertical-align: middle;
+    justify-content: center;
+}
+
+.right-bio {
+    width: 49vw;
+    align-content: center;
+    margin: 0 auto;
+}
+
+.bio-name {
+    font-size: 100px;
+    font-family: 'Shadows Into Light Two', cursive;
+    /*text-shadow: 2px 2px #022c31;*/
+    color: #022c31;
+}
+
+.bio-title {
+    font-size: 32px;
+    font-family: 'Raleway', sans-serif;
+    color: #022c31;
+}
+
+
+/*----  Section  2.5 -----*/
+
+.about-h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.about-me-ptag {
+    margin: auto;
+    width: 70%;
+    margin-bottom: 50px;
+    font-size: 20px;
+}
+
+
+/*----  Section 2  -----*/
+
+div .sectionTwo {
+    display: block;
+    position: relative;
+    align-items: center;
+    height: 600px;
+}
+
+div .sectionTwo::after {
+    content: "";
+    background-image: url("../images/coffee_blur.png");
+    background-size: cover;
+    opacity: 0.9;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -2;
+}
+
+.coffeeSteamText {
+    /* background: rgba(255, 255, 255, 0.3);*/
+    display: inline-block;
+    font-size: 26px;
+    padding: 20px;
+    /* padding-left: 20px;
+    padding-right: 20px;*/
+    border-radius: 5px;
+    font-family: 'Shadows Into Light Two', cursive;
+    z-index: -1;
+    /*  margin-bottom: 60px;*/
+}
+
+.coffee-div {
+    height: 100px;
+    display: none;
+}
+
+#coffee-div1 {
+    margin-top: 20px;
+}
+
+#coffee-div7 {
+    margin-top: 20px;
+}
+
+.coffee-ul {
+    width: 300px;
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+}
+
+
+/*
+.bottom-coffee{
+  height: 70%;
+}*/
+
+.coffee-list-left {
+    float: left;
+    margin-left: 5px;
+}
+
+.coffee-list-right {
+    float: right;
+    text-align: right;
+    margin-right: 5px;
+    color: white;
+}
+
+
+/*----  Section  3 -----*/
+
+.sectionThree {
+    height: 360px;
+}
+
+.project-h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.center-project {
+    display: flex;
+    justify-content: center;
+}
+
+.project-gallery {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 30px;
+    margin-right: 30px;
+    width: 100%;
+}
+
+.projectImage {
+    height: 190px;
+    border-radius: 10px;
+    border: 10px solid rgba(255, 255, 255, 0.5);
+}
+
+.rowOne {
+    margin-bottom: 10px;
+}
+
+.allProjects {
+    text-align: center;
+
+}
+
+.projectOne{
+    flex-shrink: 1;
+}
+.projectTWo{
+    flex-shrink: 1;
+}
+.projectThree{
+    flex-shrink: 1;
+}
+/*----  Section 4  -----*/
+
+
+/*.sectionFour {
+    background-color: white;
+    height: 400px;
+}
+*/
+
+
+/*----  Section 5  -----*/
+
+.sectionFive {
+    background-color: #022c31;
+    color: white;
+    height: 380px;
+}
+
+.skills-h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+    margin-top: 20px;
+}
+
+.skills-h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.lang-list-li {
+    font-size: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.language-list {
+    margin-top: 10px;
+}
+
+.photography-h3 {
+    margin-top: 20px;
+}
+
+.photography-link {
+    margin-top: 10px;
+}
+
+.project-links {
+    color: grey;
+    font-size: 18px;
+}
+
+
+/*----  Section 6 -----*/
+
+.sectionSix {
+    height: 300px;
+}
+
+.contact-h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.logo {
+    height: 60px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.blog-posts {
+    font-size: 16px;
+    margin-top: 30px;
+}
+
+.footer {
+    margin-top: 70px;
+}
+
+
+/*----  Section 7 -----*/
+
+
+/*.sectionSeven{
+  background-color: black;
+}*/
+
+@media (max-width: 1050px) {
+
+.sectionThree {
+    height: 600px;
+}
+
+@media (max-width: 730px) {
+
+.sectionThree {
+    height: 800px;
+    margin: auto;
+    width: 30%;
+
+}
+
+@media (max-width: 400px) {
+
+.sectionThree {
+    height: 600px;
+}
+
+}
+
