@@ -306,6 +306,12 @@ div .sectionTwo::after {
     font-size: 18px;
 }
 
+.resume-link a{
+  text-decoration: none;
+}
+.resume-link a:hover{
+ color: #494646;
+}
 
 /*----  Section 6 -----*/
 
