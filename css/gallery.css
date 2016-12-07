@@ -167,9 +167,9 @@ transition-delay:.2s;
 }
 
 .info-project button{
-  background-color: white;
+  background-color: #022c31;
   opacity: 0.5;
-  filter: alpha(opacity=50);
+  filter: alpha(opacity50);
 }
 
 .project-desc{
