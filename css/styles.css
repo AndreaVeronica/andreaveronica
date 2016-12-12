@@ -23,7 +23,6 @@ a:hover {
 }
 
 
-
 /*----  New NavBar -----*/
 nav,
 .navbar-toggle {
@@ -353,28 +352,43 @@ div .sectionTwo::after {
   background-color: black;
 }*/
 /*
-@media (max-width: 1050px) {
 
-.sectionThree {
-    height: 600px;
+
+
+/* Portrait */
+
+/*
+@media only screen
+  and (min-device-width: 320px)
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+
+     .navbar-toggle {
+        position: fixed;
+        top: 30px;
+        right: 30px;
+        width: 70px;
+        height: 50px;
+        z-index: 20;
+        cursor: pointer;
+      }
+    .bar{
+      height: 7px;
+    }
+
+      nav ul li a {
+      font-size: 50pt;
+      color: inherit;
+      font-weight: bolder;
+      text-decoration: none;
+    }
+
+     .project-tools{
+        font-size: 8px;
+      }
+
+
 }
 
-@media (max-width: 730px) {
-
-.sectionThree {
-    height: 800px;
-    margin: auto;
-    width: 30%;
-
-}
-
-@media (max-width: 400px) {
-
-.sectionThree {
-    height: 600px;
-}
-
-}*/
-
-
-
+*/
