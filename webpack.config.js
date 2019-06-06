@@ -1,13 +1,13 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+const { VueLoaderPlugin } = require("vue-loader");
 
 module.exports = {
   mode: "development",
   entry: {
     app: "./src/index.js",
     main: "./src/app.js"
-    
   },
   devtool: "inline-source-map",
   devServer: {
@@ -18,10 +18,11 @@ module.exports = {
     new HtmlWebpackPlugin({
       hash: true,
       title: "Output Management",
-      myPageHeader: "THIS WORKED", 
-      template: './src/index.html',
-      fliename: './dist/index.html'
-    })
+      myPageHeader: "THIS WORKED",
+      template: "./src/index.html",
+      fliename: "./dist/index.html"
+    }),
+    new VueLoaderPlugin()
   ],
   output: {
     filename: "[name].bundle.js",
@@ -29,13 +30,16 @@ module.exports = {
   },
   optimization: {
     splitChunks: {
-      chunks: 'all'
+      chunks: "all"
     }
   },
   resolve: {
     alias: {
-      vue: 'vue/dist/vue.js'
+      vue: "vue/dist/vue.js"
     }
+    // extensions: [
+    //   '.vue'
+    // ]
   },
   module: {
     rules: [
@@ -50,6 +54,10 @@ module.exports = {
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/,
         use: ["file-loader"]
+      },
+      {
+        test: /\.vue$/,
+        use: "vue-loader"
       }
     ]
   }
