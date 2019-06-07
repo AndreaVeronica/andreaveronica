@@ -7,7 +7,7 @@ module.exports = {
   mode: "development",
   entry: {
     app: "./src/index.js",
-    main: "./src/app.js"
+    main: "./src/main.js"
   },
   devtool: "inline-source-map",
   devServer: {
@@ -37,9 +37,6 @@ module.exports = {
     alias: {
       vue: "vue/dist/vue.js"
     }
-    // extensions: [
-    //   '.vue'
-    // ]
   },
   module: {
     rules: [
