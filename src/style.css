@@ -22,3 +22,8 @@ body {
 .section-h2 {
 font-size: 32px;
 }
+
+.dark { 
+  background-color: #022c31;
+  color: white;
+}

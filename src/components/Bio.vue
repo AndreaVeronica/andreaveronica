@@ -18,14 +18,16 @@ import { profileImage } from 'module';
                 <div class="center-bio">
                     <h2 class="section-h2 font-style-cursive" id="about-link"> {{ title }}</h2>
                     <div class="bio-text">
-                        <p>Hey! My name is Andrea and I am a Web Developer residing in Atlanta, GA.</p>
+                        <p> Hey! My name is Andrea and I am a Software Developer residing in Atlanta, GA. </p>
                         <br>
-                        <p>I enjoy creating aesthetically pleasing websites from visual design to back-end. I was an insurance auditor in a past life and one day I realized I needed to find a career that would allow me to be creative. After conversations with a friend, I started exploring web design. On route to becoming a web designer, I was introduced to the wonderful world of programming and I've been hooked ever since. </p>
+                        <p> I enjoy creating aesthetically pleasing websites from visual design to back-end. I was an insurance auditor 
+                          in a past life and one day I realized I needed to find a career that would allow me to be creative. 
+                          After conversations with a friend, I started exploring web design. On route to becoming a web designer, 
+                          I was introduced to the wonderful world of programming and I've been hooked ever since. </p>
                         <br>
-                        <p> My interest in becoming a web developer drove me to enroll in General Assembly's web development immersive course in hopes of making my dream a reality. Now that the course is over, I'm excited to find opportunities that will help me expand the knowledge and skill set I learned at GA. </p>
+                        <p> I'm excited to find opportunities that will help me expand the knowledge and skill set I learned at GA. </p>
                     </div>
                 </div>
-  
         </section>
   </div>
 </template>
@@ -34,8 +36,9 @@ import { profileImage } from 'module';
 import profileImage from '../images/profilepic.jpg'
 
 export default {
-  name: 'AboutMe',
+  name: 'Bio',
   components: {
+
   },
   data() {
     return {

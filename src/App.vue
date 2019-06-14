@@ -2,7 +2,7 @@
   <div id="container">
     <div class="navigation">
       <ul>
-        <li> <router-link to="/about"> About Me </router-link> </li> 
+        <li> <router-link to="/"> About Me </router-link> </li> 
          <li> <router-link to="/portfolio"> Portfolio </router-link> </li> 
          <li> <router-link to="/skills"> Skills </router-link> </li> 
          <li> <router-link to="/photos"> Photos </router-link> </li> 
@@ -18,7 +18,7 @@
 </template>
 
 <script>
-import AboutMe from './components/AboutMe.vue'
+import AboutMe from './pages/AboutMe.vue'
 
 export default {
   name: 'App',
