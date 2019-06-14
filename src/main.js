@@ -12,7 +12,7 @@ Vue.use(VueRouter);
 console.log(_.join(["Another", "module", "loaded!"], " "));
 
 const routes = [
-  { path: '/about', component: AboutMe },
+  { path: '/', component: AboutMe },
   { path: '/portfolio', component: Portfolio },
   { path: '/photos', component: Photos },
   { path: '/skills', component: Skills },
@@ -25,9 +25,6 @@ const router = new VueRouter({
 
 new Vue({
   el: "#app",
-  data: {
-    message: "Hello Vue!"
-  },
   router,
   components: { App },
   template: "<App/>"

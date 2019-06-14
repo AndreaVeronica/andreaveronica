@@ -12,19 +12,21 @@
 
     <div class="page-container">
       <router-view></router-view>
+      
     </div>
   </div>
 </template>
 
 <script>
+import AboutMe from './components/AboutMe.vue'
 
 export default {
   name: 'App',
   components: {
+    AboutMe
   },
   data() {
     return {
-      msg: "hey this worked"
     }
   }
 }

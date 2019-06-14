@@ -17,8 +17,7 @@ module.exports = {
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       hash: true,
-      title: "Output Management",
-      myPageHeader: "THIS WORKED",
+      title: "Andrea Airall",
       template: "./src/index.html",
       fliename: "./dist/index.html"
     }),
