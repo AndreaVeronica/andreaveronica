@@ -1,0 +1,87 @@
+<template>
+  <div>
+       <section class="allSections bio-section top-bio">
+            <div class="bio-bottom"> 
+                <div class="left-bio-bottom"> 
+                    <span class="left-fav-section"> A Few Of Favorite Things: </span>
+                </div>
+                <div class="right-bio-bottom"> 
+                  <h2 class="sentence"> 
+                      <div class="slidingVertical">
+                        <span class="right-fav-section" v-for="t in things"> {{ t.thing }} </span>
+                      </div>
+                  </h2>
+                </div>
+            </div>
+
+        </section>
+  </div>
+</template>
+
+<script>
+import favoriteThings from '../data/favoriteThings';
+
+export default {
+  name: 'FavoriteThings',
+  components: {
+
+  },
+  computed: {
+      things() {
+          return favoriteThings
+      },
+      displayText 
+  },
+  data() {
+    return {
+      title: "About Me",
+      profileImage: profileImage
+    }
+  },
+  methods: {
+    setDisplayTextFaded() {
+
+    },
+    setDisplayTextSolid(){
+      
+    }
+  }
+}
+</script>
+
+<style>
+    .bio-section{
+      height: 550px;
+      display: flex;
+      justify-content: space-between; 
+      flex-wrap: wrap;
+      text-align: center;
+      align-items: center;
+    }
+  .bio-bottom {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    /* padding-top: 60px; */
+  }
+    .left-bio-bottom {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 10px;
+    /* align-self: center; */
+  }
+  .right-bio-bottom{
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: space-between;
+  }
+  .right-fav-section{
+    width: 100%;
+    height: 30px;
+    text-align: left;
+
+  }
+</style>
