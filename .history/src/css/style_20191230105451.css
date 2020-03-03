@@ -1,0 +1,46 @@
+body {
+  background-image: url("../images/lightteal.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -3;
+  font-family: 'Raleway', sans-serif;
+  color: #022c31;
+  margin: 0 auto;
+}
+
+.font-style-cursive {
+  font-family: 'Shadows Into Light Two', cursive;
+  font-weight: lighter;
+}
+
+.font-style-print{
+  font-family: 'Raleway', sans-serif;
+  font-weight: lighter;
+}
+
+.font100
+
+.section-h2 {
+font-size: 32px;
+}
+
+.dark { 
+  background-color: #022c31;
+  color: white;
+}
+
+.white-font {
+  color: white;
+}
+
+.teal-font {
+  color: #022c31;
+}
+
+.logo {
+  height: 60px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
