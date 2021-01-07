@@ -4,7 +4,7 @@
             <div class="bio-top">
                 <div class="left-bio">
                     <h1 class="bio-name font-style-cursive"> Andrea Airall </h1>
-                    <h2 class="bio-title font-style-print"> Software Developer</h2>
+                    <h2 class="bio-title font-style-print"> Software Engineer</h2>
                     <p> </p>
                 </div>
                 <div class="right-bio">
@@ -21,7 +21,7 @@
             <div class="center-bio">
                 <h2 class="section-h2 font-style-cursive" id="about-link"> {{ title }}</h2>
                 <div class="bio-text">
-                    <p> Hey! My name is Andrea and I am a Software Developer residing in Atlanta, GA. </p>
+                    <p> Hey! My name is Andrea and I am a Senior Software Engineer residing in Atlanta, GA. </p>
                     <br>
                     <p> I enjoy creating aesthetically pleasing websites from visual design to back-end and I thrive in situations that allow me to be creative as well as think critically. I enjoy working on small agile teams to create value-driven products.</p>
                     <br>    
@@ -33,7 +33,6 @@
 
 <script>
 import profileImage from '../images/profilepic.jpg'
-import favoriteThings from '../data/favoriteThings';
 import FavoriteThings from '../components/FavoriteThings.vue';
 
 export default {

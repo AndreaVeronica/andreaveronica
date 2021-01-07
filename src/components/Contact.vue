@@ -9,7 +9,7 @@
                 </div>
             </div>
             <div class="center-project">
-                <h4 class="footer">&copy; Andrea Airall 2019</h4>
+                <h4 class="footer">&copy; Andrea Airall 2021</h4>
             </div>
  
   </div>

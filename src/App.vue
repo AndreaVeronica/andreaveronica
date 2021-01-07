@@ -16,6 +16,22 @@
     <!-- <navigation></navigation> -->
 
     <div class="page-container">
+        <header class="nav-bar">
+        <div class="navbar-toggle">
+            <div class="bar1"> </div>
+            <div class="bar2"> </div>
+            <div class="bar3"> </div>
+        </div>
+        <nav class="nav-hide">
+            <ul>
+                <li class="font-style"><a class="hvr-grow" href="#about-link">About Me</a></li>
+                <li class="font-style"><a class="hvr-grow" href="#project-link">Portfolio</a></li>
+                <li class="font-style"><a class="hvr-grow" href="#skills-link">Skills</a></li>
+               <!--  <li class="font-style"><a class="hvr-grow" href="#photo-link">Photography</a></li> -->
+                <li class="font-style"><a class="hvr-grow" href="#contact-link">Contact</a></li>
+            </ul>
+        </nav>
+      </header>
       <router-view></router-view>
       
     </div>

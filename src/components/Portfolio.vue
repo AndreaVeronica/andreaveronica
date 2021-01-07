@@ -78,7 +78,7 @@ export default {
 .project-h2 {
     font-size: 32px;
     margin-bottom: 30px;
-    margin-top: 30px;
+    margin-top: 20px;
 }
 
 .center-project {
