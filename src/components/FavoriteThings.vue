@@ -21,12 +21,10 @@ export default {
   },
    created() { 
      this.initializeDisplay()
-    //  this.displayTextSolid = this.things[0].thing
    
   },
   computed: {
       things() {
-        console.log(favoriteThings, 'favthings')
           return favoriteThings
       }
   },

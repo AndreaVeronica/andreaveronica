@@ -1,54 +1,42 @@
 <template>
   <div id="container">
-    <!-- <div class="navigation dark">
-      <span> <router-link class="font-style-cursive" to="/"> About Me </router-link> </span>
-      <span> <a class="font-style-cursive" href="/#project-link">Portfolio</a> </span>
-      <span> <a class="font-style-cursive"  href="/#skills-link">Skills</a> </span>
-      <span> <router-link class="font-style-cursive" to="/photos"> Photos </router-link> </span>
-      <span> <router-link class="font-style-cursive" to="/"> Contact</router-link>  </span>
-    </div> -->
-
-       <!-- <li class="font-style"><a class="hvr-grow" href="#about-link">About Me</a></li>
-                <li class="font-style"><a class="hvr-grow" href="#project-link">Portfolio</a></li>
-                <li class="font-style"><a class="hvr-grow" href="#skills-link">Skills</a></li> -->
-               <!--  <li class="font-style"><a class="hvr-grow" href="#photo-link">Photography</a></li> -->
-                <!-- <li class="font-style"><a class="hvr-grow" href="#contact-link">Contact</a></li> -->
-    <!-- <navigation></navigation> -->
-
-    <div class="page-container">
-        <header class="nav-bar">
-        <div class="navbar-toggle">
-            <div class="bar1"> </div>
-            <div class="bar2"> </div>
-            <div class="bar3"> </div>
+    <div>  
+        <Slide class="nav-component" right>
+            <a class="hvr-grow" href="#about-link">About Me</a>
+                <a class="hvr-grow" href="#project-link">Portfolio</a>
+                <a class="hvr-grow" href="#skills-link">Skills</a>   
+                <a class="hvr-grow" href="#contact-link">Contact</a>
+        </Slide>
+        <div class="add-space">
         </div>
-        <nav class="nav-hide">
-            <ul>
-                <li class="font-style"><a class="hvr-grow" href="#about-link">About Me</a></li>
-                <li class="font-style"><a class="hvr-grow" href="#project-link">Portfolio</a></li>
-                <li class="font-style"><a class="hvr-grow" href="#skills-link">Skills</a></li>
-               <!--  <li class="font-style"><a class="hvr-grow" href="#photo-link">Photography</a></li> -->
-                <li class="font-style"><a class="hvr-grow" href="#contact-link">Contact</a></li>
-            </ul>
-        </nav>
-      </header>
-      <router-view></router-view>
-      
+    </div>
+    <div>
+        <router-view></router-view>
     </div>
   </div>
 </template>
 
 <script>
-import Navigation from './components/Navigation.vue'
+import { Slide } from 'vue-burger-menu'  
 
 export default {
   name: 'App',
   components: {
-    Navigation
+    Slide
   },
   data() {
     return {
     }
+  },
+  computed: {
+      photosUrl() {
+          return favoriteThings
+      }
+  },
+  methods: {
+      goToAboutMe() {
+        this.$router.push({ name: 'about' });
+      }
   }
 }
 </script>
@@ -70,4 +58,52 @@ export default {
   .page-container {
     margin-top: 80px;
   }
+
+  .add-space {
+    height: 30px;
+  }
+
+
+/* Slide component overrides  */
+.bm-menu {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  background-color: #022c31;opacity:0.9;
+  overflow-x: hidden;
+  padding-top: 60px;
+  transition: 0.5s;
+  font-family: 'Shadows Into Light Two', cursive;
+}
+
+.bm-burger-bars {
+  background-color: #022c31;
+}
+
+.bm-item-list {
+  color: #b8b7ad;
+  margin-left: 10%;
+  font-size: 20px;
+}
+
+.bm-item-list>*>span {
+  margin-left: 10px;
+  font-weight: 700;
+  color: white;
+}
+
+ .bm-overlay  {
+  background-image: url("../images/lightteal.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -3;
+  font-family: 'Raleway', sans-serif;
+  color: #022c31;
+  margin: 0 auto;
+}
 </style>

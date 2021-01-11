@@ -8,8 +8,8 @@ import Photos from './pages/Photos.vue'
 Vue.use(VueRouter);
 
 const routes = [
-  { path: '/', component: AboutMe },
-  { path: '/photos', component: Photos }
+  { path: '/', name: 'about', component: AboutMe },
+  { path: '/photos', name: 'photos',  component: Photos }
 ]
 
 const router = new VueRouter({

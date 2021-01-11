@@ -2,9 +2,6 @@
   <div id="container">
       {{ msg }}
   </div>
-  <div>
-  
-  </div>
 </template>
 
 <script>
