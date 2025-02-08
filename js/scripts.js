@@ -14,7 +14,6 @@ setInterval(function(event) {
         hasScrolled();
         didScroll = false;
     }
-
 }, 250);
 
 
@@ -65,3 +64,19 @@ $(function(){
   });
 });
 
+function buildSkillsList() {
+    var languages = [ 'HTML', 'CSS' , 'JavaScript', 'React', 'Vue', 'Bootstrap', 'Ruby on Rails', 'PostgreSQL'];
+
+    var skillsList = document.getElementById("skill-list");
+    
+    languages.forEach(function (game) {
+        var li = document.createElement("li");
+    
+        li.textContent = game;
+        li.classList.add("lang-list-li");
+        skillsList.appendChild(li);
+    });
+}
+document.addEventListener('DOMContentLoaded', function() {
+    buildSkillsList();
+});

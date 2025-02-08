@@ -18,112 +18,44 @@ a:hover {
     color: #808080;
 }
 
-.font-style {
+/*----  shared with sections   -----*/
+
+.section-header {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 30px;
+    margin-top: 30px;
     font-family: 'Shadows Into Light Two', cursive;
 }
 
-
-
-/*----  New NavBar -----*/
-nav,
-.navbar-toggle {
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-nav {
-  position: fixed;
-  z-index: 10;
-  background-color: #022c31;
-  opacity: 0.9;
-  filter: alpha(opacity=90);
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  display: table;
-  color: white;
-}
-
-.nav-hide {
-    display: none;
-}
-
-nav ul {
-  display: table-cell;
-  vertical-align: middle;
-  padding-left: 0 !important;
-}
-
-nav ul li {
-    list-style: none;
-    margin-bottom: 30px;
-
-}
-
-nav ul li a {
-  font-size: 35pt;
-  color: inherit;
-  font-weight: bolder;
-  text-decoration: none;
-}
-
-/*----- hamburger toggle ----*/
-
-.navbar-toggle {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  width: 40px;
-  height: 40px;
-  z-index: 20;
-  cursor: pointer;
-}
-
-.bar1,
-.bar2,
-.bar3 {
-  width: 100%;
-  height: 5px;
-  border-radius: 2px;
-  margin-bottom: 5px;
-  background-color: #022c31;
-  transition: all 0.3s ease-in-out;
-}
-
-.navbar-on .bar1,
-.navbar-on .bar2,
-.navbar-on .bar3 { background-color: white; }
-
-.navbar-on .bar1 {
-  transform-origin: 10% 40%;
-  transform: rotate(45deg);
-}
-
-.navbar-on .bar3 {
-  transform-origin: 10% 40%;
-  transform: rotate(-45deg);
-}
-
-.navbar-on .bar2 { background-color: transparent; }
-
-
-
-
-/*----  Section 1   -----*/
-
-.sectionOne {
-    color: white;
+.section-container {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: flex-start;
-    align-items: center;
+    flex-direction: column;
+}
+
+
+/*----  Name -----*/
+
+#name-container {
     height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+}
+
+.bio-name {
+    font-size: 90px;
+    font-family: 'Shadows Into Light Two', cursive;
+    color: #022c31;
+}
+
+.bio-title {
+    font-size: 32px;
+    font-family: 'Raleway', sans-serif;
+    color: #022c31;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .bio-image {
@@ -132,51 +64,89 @@ nav ul li a {
     border: 10px solid rgba(255, 255, 255, 0.5);
 }
 
-.left-bio {
-    width: 49vw;
-    text-align: center;
-    vertical-align: middle;
+/*----  About -----*/
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    align-self: center;
+    
+}
+
+#about-container {
+    background-color: white;
+    font-size: 20px;
+    /* padding-top: 20px; */
+    padding-bottom: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 400px;
+}
+
+/*----  Skills ----*/
+
+#skills-container {
+    background-color: #022c31;
+    color: white;
+    height: 380px;
+    padding-top: 20px;
+}
+
+.skill-content {
+    display: flex;
+    align-self: center;
+    width: 200px;
+}
+
+.lang-list-li {
+    font-size: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.skill-list-container {
+    width: 200px;
+}
+
+
+/*----  Contact -----*/
+
+#contact-container {
+    justify-content: center;
+    height: 300px;
+}
+
+.contact-icons {
+    display: flex;
     justify-content: center;
 }
 
-.right-bio {
-    width: 49vw;
-    align-content: center;
-    margin: 0 auto;
+.logo {
+    height: 60px;
+    margin-left: 5px;
+    margin-right: 5px;
 }
 
-.bio-name {
-    font-size: 100px;
-    font-family: 'Shadows Into Light Two', cursive;
-    /*text-shadow: 2px 2px #022c31;*/
-    color: #022c31;
+.footer {
+    margin-top: 70px;
+    display: flex;
+    justify-content: center;
 }
 
-.bio-title {
-    font-size: 32px;
-    font-family: 'Raleway', sans-serif;
-    color: #022c31;
+/*----  Placeholder  -----*/
+
+/* .resume-link a{
+    text-decoration: none;
 }
 
-
-/*----  Section  2.5 -----*/
-
-.about-h2 {
-    text-align: center;
-    font-size: 32px;
-    margin-bottom: 30px;
-    margin-top: 30px;
+.resume-link a:hover{
+    color: #494646;
 }
+   */
 
-.about-me-ptag {
-    margin: auto;
-    width: 70%;
-    margin-bottom: 50px;
-    font-size: 20px;
-}
-
-
-/*----  Section 2  -----*/
+   /*----  Section 2  -----*/
 
 div .sectionTwo {
     display: block;
@@ -248,133 +218,3 @@ div .sectionTwo::after {
     margin-right: 5px;
     color: white;
 }
-
-
-/*----  Section 3  -----*/
-
-/*in gallery.css*/
-
-/*----  Section 4  -----*/
-
-
-/*.sectionFour {
-    background-color: white;
-    height: 400px;
-}
-*/
-
-
-/*----  Section 5  -----*/
-
-.sectionFive {
-    background-color: #022c31;
-    color: white;
-    height: 380px;
-}
-
-.skills-h2 {
-    font-size: 32px;
-    margin-bottom: 30px;
-    margin-top: 20px;
-}
-
-.skills-h3 {
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-
-.lang-list-li {
-    font-size: 20px;
-    margin-left: 20px;
-    margin-right: 20px;
-}
-
-.language-list {
-    margin-top: 10px;
-}
-
-.photography-h3 {
-    margin-top: 20px;
-}
-
-.photography-link {
-    margin-top: 10px;
-}
-
-.project-links {
-    color: grey;
-    font-size: 18px;
-}
-
-.resume-link a{
-  text-decoration: none;
-}
-.resume-link a:hover{
- color: #494646;
-}
-
-/*----  Section 6 -----*/
-
-.sectionSix {
-    height: 300px;
-}
-
-.contact-h2 {
-    font-size: 32px;
-    margin-bottom: 30px;
-    margin-top: 30px;
-}
-
-.logo {
-    height: 60px;
-    margin-left: 5px;
-    margin-right: 5px;
-}
-
-.blog-posts {
-    font-size: 16px;
-    margin-top: 30px;
-}
-
-.footer {
-    margin-top: 70px;
-}
-
-/*----  Section 6.5 -----*/
-.sectionFivept5{
-    height: 400px;
-    background-color: white;
-}
-
-/*----  Section 7 -----*/
-
-
-/*.sectionSeven{
-  background-color: black;
-}*/
-/*
-@media (max-width: 1050px) {
-
-.sectionThree {
-    height: 600px;
-}
-
-@media (max-width: 730px) {
-
-.sectionThree {
-    height: 800px;
-    margin: auto;
-    width: 30%;
-
-}
-
-@media (max-width: 400px) {
-
-.sectionThree {
-    height: 600px;
-}
-
-}*/
-
-
-
