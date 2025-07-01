@@ -4,7 +4,18 @@ font-family: 'Raleway', sans-serif;
 font-family: 'Shadows Into Light Two', cursive; */
 
 body {
-    background-image: url("../images/lightteal.jpg");
+    /* background-image: linear-gradient(to right top, #053437, #2e6162, #569291, #81c5c1, #affcf3); */
+    
+    background: hsla(192, 43%, 93%, 1);
+
+    background: radial-gradient(circle, hsla(192, 43%, 93%, 1) 0%, hsla(190, 21%, 47%, 1) 100%, hsla(191, 20%, 49%, 1) 100%);
+  
+    background: -moz-radial-gradient(circle, hsla(192, 43%, 93%, 1) 0%, hsla(190, 21%, 47%, 1) 100%, hsla(191, 20%, 49%, 1) 100%);
+  
+    background: -webkit-radial-gradient(circle, hsla(192, 43%, 93%, 1) 0%, hsla(190, 21%, 47%, 1) 100%, hsla(191, 20%, 49%, 1) 100%);
+  
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#E6F2F5", endColorstr="#5F8A93", GradientType=1 );
+    
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -22,9 +33,9 @@ a:hover {
 
 .section-header {
     text-align: center;
-    font-size: 32px;
-    margin-bottom: 30px;
-    margin-top: 30px;
+    font-size: 20px;
+    margin-bottom: 15px;
+    margin-top: 15px;
     font-family: 'Shadows Into Light Two', cursive;
 }
 
@@ -37,17 +48,20 @@ a:hover {
 /*----  Name -----*/
 
 #name-container {
-    height: 700px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 100px;
+    gap: 40px;
+    margin-top: 65px;
+    margin-bottom: 50px;
 }
 
 .bio-name {
-    font-size: 90px;
+    font-size: 60px;
     font-family: 'Shadows Into Light Two', cursive;
     color: #022c31;
+    font-weight: 900px;
 }
 
 .bio-title {
@@ -59,9 +73,14 @@ a:hover {
 }
 
 .bio-image {
-    height: 300px;
-    border-radius: 5px;
-    border: 10px solid rgba(255, 255, 255, 0.5);
+    height: 250px;
+    border-radius: 2px;
+    /* border-radius: 50%; */
+    border: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+#bio-initial {
+    margin-left:  10px;
 }
 
 /*----  About -----*/
@@ -69,53 +88,25 @@ a:hover {
 .about-content {
     display: flex;
     flex-direction: column;
-    width: 70%;
+    width: 60%;
     align-self: center;
     
 }
 
 #about-container {
-    background-color: white;
     font-size: 20px;
-    /* padding-top: 20px; */
-    padding-bottom: 60px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 400px;
+    margin-bottom: 75px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
 }
-
-/*----  Skills ----*/
-
-#skills-container {
-    background-color: #022c31;
-    color: white;
-    height: 380px;
-    padding-top: 20px;
-}
-
-.skill-content {
-    display: flex;
-    align-self: center;
-    width: 200px;
-}
-
-.lang-list-li {
-    font-size: 20px;
-    margin-left: 20px;
-    margin-right: 20px;
-}
-
-.skill-list-container {
-    width: 200px;
-}
-
 
 /*----  Contact -----*/
 
 #contact-container {
     justify-content: center;
-    height: 300px;
 }
 
 .contact-icons {
@@ -124,16 +115,53 @@ a:hover {
 }
 
 .logo {
-    height: 60px;
+    height: 50px;
     margin-left: 5px;
     margin-right: 5px;
 }
 
 .footer {
     margin-top: 70px;
+    margin-bottom: 20px;
     display: flex;
     justify-content: center;
 }
+
+/*----  Skills ----*/
+/* 
+#skills-container {
+    background-color: #022c31;
+    color: white;
+    height: 500px;
+    padding-top: 20px;
+    display: flex;
+}
+
+.skill-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-radius: 1px;
+     box-shadow: 0px 0px 0px 8px rgba(0,0,0,0.3);  
+}
+
+.skill-section-container {
+    display: flex;
+    flex-direction: column;
+}
+.skills-section-list {
+    display: flex;
+    margin-left: 50px;
+    gap: 20px;
+}
+.skills-section-header {
+    font-size: 20px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    margin-left: 40px;
+    font-family: 'Shadows Into Light Two', cursive;
+} */
+
 
 /*----  Placeholder  -----*/
 
@@ -145,76 +173,3 @@ a:hover {
     color: #494646;
 }
    */
-
-   /*----  Section 2  -----*/
-
-div .sectionTwo {
-    display: block;
-    position: relative;
-    align-items: center;
-    height: 600px;
-}
-
-div .sectionTwo::after {
-    content: "";
-    background-image: url("../images/coffee_blur.png");
-    background-size: cover;
-    opacity: 0.9;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    position: absolute;
-    z-index: -2;
-}
-
-.coffeeSteamText {
-    /* background: rgba(255, 255, 255, 0.3);*/
-    display: inline-block;
-    font-size: 26px;
-    padding: 20px;
-    /* padding-left: 20px;
-    padding-right: 20px;*/
-    border-radius: 5px;
-    font-family: 'Shadows Into Light Two', cursive;
-    z-index: -1;
-    /*  margin-bottom: 60px;*/
-}
-
-.coffee-div {
-    height: 100px;
-    display: none;
-}
-
-#coffee-div1 {
-    margin-top: 20px;
-}
-
-#coffee-div7 {
-    margin-top: 20px;
-}
-
-.coffee-ul {
-    width: 300px;
-    margin: 0 auto;
-    padding: 0;
-    list-style: none;
-}
-
-
-/*
-.bottom-coffee{
-  height: 70%;
-}*/
-
-.coffee-list-left {
-    float: left;
-    margin-left: 5px;
-}
-
-.coffee-list-right {
-    float: right;
-    text-align: right;
-    margin-right: 5px;
-    color: white;
-}
