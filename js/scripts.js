@@ -1,67 +1,79 @@
-var didScroll;
-var lastScrollTop = 0;
-var delta = 5;
-var navbarHeight = $('header').outerHeight();
+var skillsData = [
+    {name: 'SQL', type: 'data'},
+    {name: 'Excel', type: 'data'},
+    {name: 'Data Visualization', type: 'data'},
+    {name: 'Pivot tables', type: 'data'},
+    {name: 'VLOOKUP', type: 'data'},
+    {name: 'Google Sheets', type: 'data'},
+    {name: 'Segment', type: 'data'},
+    {name: 'Google Analytics', type: 'data'},
+    {name: 'A/B Testing', type: 'qa'},
+    {name: 'Event Tracking', type: 'qa'},
+    {name: 'QA Testing', type: 'qa'},
+    {name: 'Optimizely', type: 'qa'},
+    {name: 'HTML', type: 'design'},
+    {name: 'CSS', type: 'design'},
+    {name: 'Figma', type: 'design'},
+    {name: 'Canva', type: 'design'},
+    {name: 'Jira', type: 'design'},
+    {name: 'Miro', type: 'design'},
+    {name: 'Jira', type: 'design'},
+    {name: 'HubSpot', type: 'crm'},
+    {name: 'Email Marketing', type: 'crm'},
+    {name: 'Microsoft Word', type: 'other'},
+    {name: 'Photoshop', type: 'other'}
+]
 
-$(window).scroll(function(event) {
-    didScroll = true;
+function buildSkillSections() {
+    var skillsList = document.getElementById("skill-list");
+    var skillsSectionList = ['data', 'qa', 'design', 'crm', 'other']
+    skillsSectionList.forEach(section => {
+        var newDiv = document.createElement('div');
+        skillsList.appendChild(newDiv);
+        newDiv.classList.add('skill-section-container');
+        var sectionHeader = document.createElement('p');
+        sectionHeader.classList.add('skills-section-header');
 
-});
-
-
-setInterval(function(event) {
-    if (didScroll) {
-        hasScrolled();
-        didScroll = false;
-    }
-
-}, 250);
-
-
-
-function hasScrolled() {
-    var st = $(this).scrollTop();
-
-    if (Math.abs(lastScrollTop - st) <= delta)
-        return;
-    if (st > lastScrollTop && st > navbarHeight) {
-        $('header').removeClass('nav-down').addClass('nav-up');
-    } else {
-
-        if (st + $(window).height() < $(document).height()) {
-            $('header').removeClass('nav-up').addClass('nav-down');
+        var sectionTitle = ''
+          switch (section) {
+            case 'data':
+                sectionTitle = 'Data & Analytics:'
+              break;
+            case 'qa':
+                sectionTitle = 'Experimentation & QA:'
+              break;
+            case 'design':
+                sectionTitle = 'Data & Analytics:'
+            break;
+            case 'crm':
+                sectionTitle = 'CRM & Marketing:'
+            break;   
+            case 'other':
+                sectionTitle = 'Other:'
+            break;          
         }
-    }
 
-    lastScrollTop = st;
+        sectionHeader.textContent = sectionTitle;
+        var sectionList = document.createElement('ul');
+        var listClassName = section + "-list"
+        sectionList.id = listClassName
+        sectionList.classList.add('skills-section-list');
+        newDiv.appendChild(sectionHeader)
+        newDiv.appendChild(sectionList)
+  
+    });
+}
+function buildSkillsList(skills) {
+    skills.forEach(function (skill) {
+        var li = document.createElement("li");
+        li.textContent = skill.name;
+        var sectionNameForList = skill.type + "-list"
+        var skillsList = document.getElementById(sectionNameForList);
+        skillsList.appendChild(li);
+    });
 }
 
-$(window).scroll(function() {
-    var height = $(window).scrollTop();
-
-    if (height > 900) {
-
-        $("#coffee-div1").fadeIn();
-        $("#coffee-div2").fadeIn(1000);
-        $("#coffee-div3").fadeIn(2500);
-        $("#coffee-div4").fadeIn(4000);
-        $("#coffee-div5").fadeIn(5000);
-        $("#coffee-div6").fadeIn(6000);
-        $("#coffee-div7").fadeIn();
-        $("#coffee-div8").fadeIn(1000);
-        $("#coffee-div9").fadeIn(2500);
-        $("#coffee-div10").fadeIn(4000);
-        $("#coffee-div11").fadeIn(5000);
-        $("#coffee-div12").fadeIn(6000);
-    }
-
+document.addEventListener('DOMContentLoaded', function() {
+    // buildSkillSections()
+    // buildSkillsList(skillsData);
 });
-
-$(function(){
-  $('.navbar-toggle, nav').click(function(){
-    $('.navbar-toggle').toggleClass('navbar-on');
-    $('nav').fadeToggle();
-    $('nav').removeClass('nav-hide');
-  });
-});
-
